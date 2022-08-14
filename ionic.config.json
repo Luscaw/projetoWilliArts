@@ -1,0 +1,7 @@
+{
+  "name": "projetoWilliArts",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
