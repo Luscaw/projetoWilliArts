@@ -1,3 +1,46 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title>Via CEP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<form #f="ngForm">
+  <div class="Form-group">
+
+    <br><br>
+    <ion-item>
+      <ion-label for="cep">Cep:</ion-label><br>
+      <ion-input type="text" clas="Form-control" id="cep" name="cep" ngModel #cep="ngModel"></ion-input>
+    </ion-item>
+
+    <br><br>
+    <ion-item>
+      <ion-label for="logradouro">Logradouro:</ion-label><br>
+      <ion-input type="text" clas="Form-control" id="logradouro" name="logradouro" ngModel #logradouro="ngModel">
+      </ion-input>
+    </ion-item>
+
+    <br><br>
+    <ion-item>
+      <ion-label for="bairro">Bairro:</ion-label><br>
+      <ion-input type="text" clas="Form-control" id="bairro" name="bairro" ngModel #bairro="ngModel"></ion-input>
+    </ion-item>
+
+    <br><br>
+    <ion-item>
+      <ion-label for="cidade">Cidade:</ion-label><br>
+      <ion-input type="text" clas="Form-control" id="cidade" name="cidade" ngModel #cidade="ngModel"></ion-input>
+    </ion-item>
+
+    <br><br>
+    <ion-item>
+      <ion-label for="uf">UF:</ion-label><br>
+      <ion-input type="text" clas="Form-control" id="uf" name="uf" ngModel #uf="ngModel"></ion-input>
+    </ion-item>
+
+    <br>
+    <ion-button color="warning" (click)="consultaCep(cep.value, f)">Buscar</ion-button>
+    <ion-button color="medium" type="reset">Limpar</ion-button>
+
+  </div>
+</form>
